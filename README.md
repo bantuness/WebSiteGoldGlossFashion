@@ -1,2 +1,0 @@
-# WebSiteGoldGlossFashion
- Desenvolvimento Website
