@@ -1,12 +1,6 @@
-*
-{
-    box-sizing: border-box;
-}
-
-
 
 main{
-    
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -33,6 +27,7 @@ main{
     position: relative;
     width: 100%;
     height: 310px;
+    overflow: hidden; /*Não utrapassar as bordas*/
 }
 
 .container .card .imgBx img{
@@ -42,5 +37,71 @@ main{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s ease-in-out;
+    transform-origin: right;/*Verificar mais tarde se é necessário, pois a centralização ficou melhor*/
 }
+
+.container .card:hover .imgBx img{
+    transform: scale(1.5);
+}
+
+.action{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+
+.action li{
+    position: relative;
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.action li span{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    padding: 4px 60px;
+    background: #fff;
+    color: #333;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.container .card .content{
+    padding: 10px;
+}
+
+.container .card .content .productName h3{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin: 5px 0;
+}
+
+.container .card .content .price_rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .card .content .price_rating h2{
+    font-size: 20px;
+    color: #ff2020;
+    font-weight: 500;
+}
+
 
